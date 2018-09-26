@@ -151,6 +151,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- route outlet -->
                     <!-- component matched by the route will render here -->
                     <router-view></router-view>
+                    <!-- set progressbar -->
+                    <vue-progress-bar></vue-progress-bar>
 
                 </div><!-- /.container-fluid -->
             </div>

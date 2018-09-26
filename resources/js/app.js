@@ -6,28 +6,13 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
-
 require('./filters');
+require('./vForm');
+require('./vueProgressBar');
 
 import {
     routes
 } from './routes';
-
-
-
-
-import {
-    Form,
-    HasError,
-    AlertError
-} from 'vform';
-
-
-window.Form = Form;
-Vue.component(HasError.name, HasError)
-Vue.component(AlertError.name, AlertError)
-
-
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
@@ -37,18 +22,12 @@ const Test = {
     template: '<div>Test Component</div>'
 }
 
-
-
-
 // 3. Create the router instance and pass the `routes` option
 
 const router = new VueRouter({
     mode: 'history',
     routes // short for `routes: routes`
 })
-
-
-
 
 
 // 4. Create and mount the root instance.

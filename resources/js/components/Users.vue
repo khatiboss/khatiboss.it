@@ -30,7 +30,7 @@
                                     <td>{{ u.name }}</td>
                                     <td>{{ u.email }}</td>
                                     <td>{{ u.type | upText}}</td>
-                                    <td>{{ u.created_at |data_italiana }}</td>
+                                    <td>{{ u.created_at |dataFormatoItaliano }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-edit" title="Edit"></i>
@@ -137,7 +137,9 @@
                     }) => (this.users = data.data));
             },
             createUser() {
+                this.$Progress.start();
                 this.userForm.post('api/users');
+                this.$Progress.finish();
             }
         },
         mounted() {

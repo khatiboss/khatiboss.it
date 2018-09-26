@@ -1,8 +1,8 @@
-import moment from 'moment';
+import Moment from 'moment';
 
 
-Vue.filter('data_italiana', function (date) {
-    return moment(date).format('Do MMMM YYYY');
+Vue.filter('dataFormatoItaliano', function (date) {
+    return Moment(date).format('Do MMMM YYYY');
 });
 
 Vue.filter('upText', function (text) {

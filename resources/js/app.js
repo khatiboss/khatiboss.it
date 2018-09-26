@@ -5,8 +5,15 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
+import {routes} from './routes';
+import { Form, HasError, AlertError } from 'vform'
+
+
+window.Form = Form;
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
@@ -17,27 +24,13 @@ const Test = {
     template: '<div>Test Component</div>'
 }
 
-// 2. Define some routes
-// Each route should map to a component. The "component" can
-// either be an actual component constructor created via
-// `Vue.extend()`, or just a component options object.
-// We'll talk about nested routes later.
-// const vs let (can change)
-let routes = [{
-        path: '/dashboard',
-        component: require('./components/Dashboard.vue')
-    },
-    {
-        path: '/profile',
-        component: require('./components/Profile.vue')
-    }
-]
 
 
 
 // 3. Create the router instance and pass the `routes` option
 
 const router = new VueRouter({
+    mode:'history',
     routes // short for `routes: routes`
 })
 

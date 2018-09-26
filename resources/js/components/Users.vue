@@ -22,13 +22,15 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Type</th>
+                                    <th>Registered at</th>
                                     <th>Actions</th>
                                 </tr>
-                                <tr>
-                                    <td>183</td>
-                                    <td>John Doe</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-success">Approved</span></td>
+                                <tr v-for="u in users" :key="u.id">
+                                    <td>{{ u.id }}</td>
+                                    <td>{{ u.name }}</td>
+                                    <td>{{ u.email }}</td>
+                                    <td>{{ u.type | upText}}</td>
+                                    <td>{{ u.created_at }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-edit" title="Edit"></i>
@@ -114,6 +116,7 @@
     export default {
         data() {
             return {
+                users: {},
                 // Create a new form instance
                 userForm: new Form({
                     name: '',
@@ -127,12 +130,21 @@
             }
         },
         methods: {
+            loadUsers() {
+                axios.get('api/users').then(
+                    ({
+                        data
+                    }) => (this.users = data.data));
+            },
             createUser() {
                 this.userForm.post('api/users');
             }
         },
         mounted() {
             console.log('Component mounted.')
+        },
+        created() {
+            this.loadUsers();
         }
     }
 

@@ -6,8 +6,17 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
-import {routes} from './routes';
-import { Form, HasError, AlertError } from 'vform'
+
+require('./filters');
+
+import {
+    routes
+} from './routes';
+import {
+    Form,
+    HasError,
+    AlertError
+} from 'vform'
 
 
 window.Form = Form;
@@ -30,9 +39,11 @@ const Test = {
 // 3. Create the router instance and pass the `routes` option
 
 const router = new VueRouter({
-    mode:'history',
+    mode: 'history',
     routes // short for `routes: routes`
 })
+
+
 
 
 

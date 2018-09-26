@@ -30,7 +30,7 @@
                                     <td>{{ u.name }}</td>
                                     <td>{{ u.email }}</td>
                                     <td>{{ u.type | upText}}</td>
-                                    <td>{{ u.created_at }}</td>
+                                    <td>{{ u.created_at |data_italiana }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-edit" title="Edit"></i>

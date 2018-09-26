@@ -9,6 +9,7 @@ window.Vue = require('vue');
 require('./filters');
 require('./vForm');
 require('./vueProgressBar');
+require('./sweetalert2');
 
 import {
     routes
@@ -29,6 +30,8 @@ const router = new VueRouter({
     routes // short for `routes: routes`
 })
 
+//Public Access to Fire
+window.Fire = new Vue();
 
 // 4. Create and mount the root instance.
 // Make sure to inject the router with the router option to make the

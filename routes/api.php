@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::apiResource('users', 'API\UserController');
+// For register many API resource controllers
+Route::apiResources([
+    'users' => 'API\UserController',
+]);

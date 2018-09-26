@@ -128,7 +128,7 @@
         },
         methods: {
             createUser() {
-                this.userForm.post('api/user');
+                this.userForm.post('api/users');
             }
         },
         mounted() {

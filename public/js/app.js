@@ -51832,14 +51832,14 @@ var staticRenderFns = [
         "button",
         {
           staticClass: "btn btn-danger",
-          attrs: { type: "button", "data-dismiss": "modal" }
+          attrs: { type: "reset", "data-dismiss": "modal" }
         },
         [_vm._v("Close")]
       ),
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
         [_vm._v("Save")]
       )
     ])

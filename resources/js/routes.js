@@ -15,6 +15,6 @@ export const routes = [{
 },
 {
     path: '/users',
-    component: require('./components/Users.vue')
+    component: require('./components/users/Users.vue')
 }
 ]

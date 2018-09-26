@@ -4,12 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./assets/bootstrap');
 window.Vue = require('vue');
-require('./filters');
-require('./vForm');
-require('./vueProgressBar');
-require('./sweetalert2');
+require('./assets/filters');
+require('./assets/vForm');
+require('./assets/vueProgressBar');
+require('./assets/sweetalert2');
 
 import {
     routes

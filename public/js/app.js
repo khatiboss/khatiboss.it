@@ -30397,12 +30397,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(140);
+__webpack_require__(205);
 window.Vue = __webpack_require__(162);
-__webpack_require__(165);
-__webpack_require__(196);
-__webpack_require__(197);
-__webpack_require__(199);
+__webpack_require__(206);
+__webpack_require__(209);
+__webpack_require__(210);
+__webpack_require__(208);
 
 
 
@@ -30434,68 +30434,7 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 140 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-window._ = __webpack_require__(141);
-window.Popper = __webpack_require__(6).default;
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.$ = window.jQuery = __webpack_require__(7);
-
-  __webpack_require__(142);
-  __webpack_require__(143);
-} catch (e) {}
-
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-window.axios = __webpack_require__(8);
-
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-// import Echo from 'laravel-echo'
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
-
-/***/ }),
+/* 140 */,
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63684,28 +63623,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(10)))
 
 /***/ }),
-/* 165 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-
-
-Vue.filter('dataFormatoItaliano', function (date) {
-    return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).format('Do MMMM YYYY');
-});
-
-Vue.filter('upText', function (text) {
-    return text.toUpperCase();
-});
-
-Vue.filter('upFirstChar', function (text) {
-    return text.charAt(0).toUpperCase() + text.slice(1);
-});
-
-/***/ }),
+/* 165 */,
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63994,7 +63912,7 @@ var routes = [{
     component: __webpack_require__(171)
 }, {
     path: '/users',
-    component: __webpack_require__(174)
+    component: __webpack_require__(201)
 }];
 
 /***/ }),
@@ -64236,745 +64154,9 @@ if (false) {
 }
 
 /***/ }),
-/* 174 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(4)
-/* script */
-var __vue_script__ = __webpack_require__(175)
-/* template */
-var __vue_template__ = __webpack_require__(176)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/Users.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-30c27aa6", Component.options)
-  } else {
-    hotAPI.reload("data-v-30c27aa6", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 175 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            users: {},
-            // Create a new form instance
-            userForm: new Form({
-                name: '',
-                email: '',
-                password: '',
-                type: '',
-                bio: '',
-                photo: ''
-
-            })
-        };
-    },
-
-    methods: {
-        loadUsers: function loadUsers() {
-            var _this = this;
-
-            axios.get('api/users').then(function (_ref) {
-                var data = _ref.data;
-                return _this.users = data.data;
-            });
-        },
-        createUser: function createUser() {
-            var _this2 = this;
-
-            this.$Progress.start();
-
-            this.userForm.post('api/users').then(function () {
-                Fire.$emit('UserCreatedEvent');
-
-                $('#addNewUserModalCenter').modal('hide');
-
-                toast({
-                    type: 'success',
-                    title: 'User created successfully'
-                });
-
-                _this2.$Progress.finish();
-            }).catch(function (error) {
-                console.log(error.message);
-                _this2.$Progress.fail();
-            });
-        }
-    },
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    },
-    created: function created() {
-        var _this3 = this;
-
-        //On loading/efresh a page
-        this.loadUsers();
-
-        //1st - anonymous function call loadUsers() method every 3s
-        //setInterval(() => this.loadUsers(), 3000);
-
-        //2nd - Call method on event 'UserCreatedEvent'
-        Fire.$on('UserCreatedEvent', function () {
-            _this3.loadUsers();
-        });
-
-        //3rd - It can call method with pusher (pusher.com)
-    }
-});
-
-/***/ }),
-/* 176 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row mt-5" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover" }, [
-              _c(
-                "tbody",
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _vm._l(_vm.users, function(u) {
-                    return _c("tr", { key: u.id }, [
-                      _c("td", [_vm._v(_vm._s(u.id))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(u.name))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(u.email))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm._f("upText")(u.type)))]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          _vm._s(_vm._f("dataFormatoItaliano")(u.created_at))
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _vm._m(2, true)
-                    ])
-                  })
-                ],
-                2
-              )
-            ])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "addNewUserModalCenter",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "addNewUserModalCenterTitle",
-          "aria-hidden": "false"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _vm._m(3),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      return _vm.createUser($event)
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.userForm.name,
-                              expression: "userForm.name"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.userForm.errors.has("name")
-                          },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Name",
-                            id: "name",
-                            name: "name"
-                          },
-                          domProps: { value: _vm.userForm.name },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.userForm,
-                                "name",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "name" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.userForm.email,
-                              expression: "userForm.email"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.userForm.errors.has("email")
-                          },
-                          attrs: {
-                            type: "email",
-                            placeholder: "Email Address",
-                            id: "email",
-                            name: "email"
-                          },
-                          domProps: { value: _vm.userForm.email },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.userForm,
-                                "email",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "email" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.userForm.password,
-                              expression: "userForm.password"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.userForm.errors.has("password")
-                          },
-                          attrs: {
-                            placeholder: "Password",
-                            type: "password",
-                            id: "password",
-                            name: "password"
-                          },
-                          domProps: { value: _vm.userForm.password },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.userForm,
-                                "password",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "password" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.type,
-                                expression: "userForm.type"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("type")
-                            },
-                            attrs: { id: "type", name: "type" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "type",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { value: "" } }, [
-                              _vm._v("Select User Role")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "admin" } }, [
-                              _vm._v("Admin")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "user" } }, [
-                              _vm._v("Standard User")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "author" } }, [
-                              _vm._v("Author")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "type" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("textarea", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.userForm.bio,
-                              expression: "userForm.bio"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.userForm.errors.has("bio")
-                          },
-                          attrs: {
-                            placeholder: "Short Bio for user (Optional)",
-                            id: "bio",
-                            name: "bio"
-                          },
-                          domProps: { value: _vm.userForm.bio },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.userForm, "bio", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "bio" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.userForm.photo,
-                              expression: "userForm.photo"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.userForm.errors.has("photo")
-                          },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Photo",
-                            id: "photo",
-                            name: "photo"
-                          },
-                          domProps: { value: _vm.userForm.photo },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.userForm,
-                                "photo",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.userForm, field: "photo" }
-                        })
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(4)
-                ]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Users List")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-tools" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-success",
-            attrs: {
-              type: "button",
-              "data-toggle": "modal",
-              "data-target": "#addNewUserModalCenter"
-            }
-          },
-          [
-            _vm._v("Add\n                            New"),
-            _c("i", {
-              staticClass: "fas fa-user-plus",
-              attrs: { title: "Add User" }
-            })
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("th", [_vm._v("ID")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Name")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Email")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Type")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Registered at")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Actions")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("a", { attrs: { href: "" } }, [
-        _c("i", { staticClass: "fa fa-edit", attrs: { title: "Edit" } })
-      ]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "" } }, [
-        _c("i", { staticClass: "fa fa-trash red", attrs: { title: "Delete" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "h5",
-        {
-          staticClass: "modal-title green",
-          attrs: { id: "addNewUserModalCenterTitle" }
-        },
-        [_vm._v("Add New")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-footer" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-danger",
-          attrs: { type: "reset", "data-dismiss": "modal" }
-        },
-        [_vm._v("Close")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Save")]
-      )
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-30c27aa6", module.exports)
-  }
-}
-
-/***/ }),
+/* 174 */,
+/* 175 */,
+/* 176 */,
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68610,46 +67792,8 @@ if (inBrowser && window.Vue) {
 /* 193 */,
 /* 194 */,
 /* 195 */,
-/* 196 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vform__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vform___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vform__);
-
-
-window.Form = __WEBPACK_IMPORTED_MODULE_0_vform__["Form"];
-Vue.component(__WEBPACK_IMPORTED_MODULE_0_vform__["HasError"].name, __WEBPACK_IMPORTED_MODULE_0_vform__["HasError"]);
-Vue.component(__WEBPACK_IMPORTED_MODULE_0_vform__["AlertError"].name, __WEBPACK_IMPORTED_MODULE_0_vform__["AlertError"]);
-
-/***/ }),
-/* 197 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_progressbar__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_progressbar__);
-
-
-var options = {
-  color: '#bffaf3',
-  failedColor: '#874b4b',
-  thickness: '5px',
-  transition: {
-    speed: '0.2s',
-    opacity: '0.6s',
-    termination: 300
-  },
-  autoRevert: true,
-  location: 'left',
-  inverse: false
-};
-
-Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_progressbar___default.a, options);
-
-/***/ }),
+/* 196 */,
+/* 197 */,
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68657,28 +67801,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_progressbar___default.a, options);
 
 
 /***/ }),
-/* 199 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweetalert2__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sweetalert2__);
-// ES6 Modules or TypeScript
-
-
-window.swal = __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default.a;
-
-var toast = __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default.a.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000
-});
-
-window.toast = toast;
-
-/***/ }),
+/* 199 */,
 /* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -72431,6 +71554,778 @@ if (typeof window !== 'undefined' && window.Sweetalert2){  window.swal = window.
 "      display: none; }\n" +
 "    body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {\n" +
 "      position: initial !important; } }");
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(204)
+/* template */
+var __vue_template__ = __webpack_require__(203)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/users/Users.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7db115a6", Component.options)
+  } else {
+    hotAPI.reload("data-v-7db115a6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 202 */,
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row mt-5" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover" }, [
+              _c(
+                "tbody",
+                [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._l(_vm.users, function(u) {
+                    return _c("tr", { key: u.id }, [
+                      _c("td", [_vm._v(_vm._s(u.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(u.name))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(u.email))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(_vm._f("upText")(u.type)))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          _vm._s(_vm._f("dataFormatoItaliano")(u.created_at))
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(2, true)
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "addNewUserModalCenter",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "addNewUserModalCenterTitle",
+          "aria-hidden": "false"
+        }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.createUser($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "modal-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.name,
+                              expression: "userForm.name"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("name")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Name",
+                            id: "name",
+                            name: "name"
+                          },
+                          domProps: { value: _vm.userForm.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "name" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.email,
+                              expression: "userForm.email"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("email")
+                          },
+                          attrs: {
+                            type: "email",
+                            placeholder: "Email Address",
+                            id: "email",
+                            name: "email"
+                          },
+                          domProps: { value: _vm.userForm.email },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "email",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "email" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.password,
+                              expression: "userForm.password"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("password")
+                          },
+                          attrs: {
+                            placeholder: "Password",
+                            type: "password",
+                            id: "password",
+                            name: "password"
+                          },
+                          domProps: { value: _vm.userForm.password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "password" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.userForm.type,
+                                expression: "userForm.type"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.userForm.errors.has("type")
+                            },
+                            attrs: { id: "type", name: "type" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.userForm,
+                                  "type",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v("Select User Role")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "admin" } }, [
+                              _vm._v("Admin")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "user" } }, [
+                              _vm._v("Standard User")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "author" } }, [
+                              _vm._v("Author")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "type" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.bio,
+                              expression: "userForm.bio"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("bio")
+                          },
+                          attrs: {
+                            placeholder: "Short Bio for user (Optional)",
+                            id: "bio",
+                            name: "bio"
+                          },
+                          domProps: { value: _vm.userForm.bio },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.userForm, "bio", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "bio" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.photo,
+                              expression: "userForm.photo"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("photo")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Photo",
+                            id: "photo",
+                            name: "photo"
+                          },
+                          domProps: { value: _vm.userForm.photo },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "photo",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "photo" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4)
+                ]
+              )
+            ])
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Users List")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-tools" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: {
+              type: "button",
+              "data-toggle": "modal",
+              "data-target": "#addNewUserModalCenter"
+            }
+          },
+          [
+            _vm._v("Add\n                            New"),
+            _c("i", {
+              staticClass: "fas fa-user-plus",
+              attrs: { title: "Add User" }
+            })
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v("ID")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Name")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Email")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Type")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Registered at")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Actions")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("a", { attrs: { href: "" } }, [
+        _c("i", { staticClass: "fa fa-edit", attrs: { title: "Edit" } })
+      ]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "" } }, [
+        _c("i", { staticClass: "fa fa-trash red", attrs: { title: "Delete" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title green",
+          attrs: { id: "addNewUserModalCenterTitle" }
+        },
+        [_vm._v("Add New")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger",
+          attrs: { type: "reset", "data-dismiss": "modal" }
+        },
+        [_vm._v("Close")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+        [_vm._v("Save")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7db115a6", module.exports)
+  }
+}
+
+/***/ }),
+/* 204 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            users: {},
+            // Create a new form instance
+            userForm: new Form({
+                name: '',
+                email: '',
+                password: '',
+                type: '',
+                bio: '',
+                photo: ''
+
+            })
+        };
+    },
+
+    methods: {
+        loadUsers: function loadUsers() {
+            var _this = this;
+
+            axios.get('api/users').then(function (_ref) {
+                var data = _ref.data;
+                return _this.users = data.data;
+            });
+        },
+        createUser: function createUser() {
+            var _this2 = this;
+
+            this.$Progress.start();
+
+            this.userForm.post('api/users').then(function () {
+                Fire.$emit('UserCreatedEvent');
+
+                $('#addNewUserModalCenter').modal('hide');
+
+                toast({
+                    type: 'success',
+                    title: 'User created successfully'
+                });
+
+                _this2.$Progress.finish();
+            }).catch(function (error) {
+                console.log(error.message);
+                _this2.$Progress.fail();
+            });
+        }
+    },
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    },
+    created: function created() {
+        var _this3 = this;
+
+        //On loading/efresh a page
+        this.loadUsers();
+
+        //1st - anonymous function call loadUsers() method every 3s
+        //setInterval(() => this.loadUsers(), 3000);
+
+        //2nd - Call method on event 'UserCreatedEvent'
+        Fire.$on('UserCreatedEvent', function () {
+            _this3.loadUsers();
+        });
+
+        //3rd - It can call method with pusher (pusher.com)
+    }
+});
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+window._ = __webpack_require__(141);
+window.Popper = __webpack_require__(6).default;
+
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.$ = window.jQuery = __webpack_require__(7);
+
+  __webpack_require__(142);
+  __webpack_require__(143);
+} catch (e) {}
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(8);
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
+
+/***/ }),
+/* 206 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+
+
+Vue.filter('dataFormatoItaliano', function (date) {
+    return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).format('Do MMMM YYYY');
+});
+
+Vue.filter('upText', function (text) {
+    return text.toUpperCase();
+});
+
+Vue.filter('upFirstChar', function (text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+});
+
+/***/ }),
+/* 207 */,
+/* 208 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweetalert2__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sweetalert2__);
+// ES6 Modules or TypeScript
+
+
+window.swal = __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default.a;
+
+var toast = __WEBPACK_IMPORTED_MODULE_0_sweetalert2___default.a.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+});
+
+window.toast = toast;
+
+/***/ }),
+/* 209 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vform__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vform___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vform__);
+
+
+window.Form = __WEBPACK_IMPORTED_MODULE_0_vform__["Form"];
+Vue.component(__WEBPACK_IMPORTED_MODULE_0_vform__["HasError"].name, __WEBPACK_IMPORTED_MODULE_0_vform__["HasError"]);
+Vue.component(__WEBPACK_IMPORTED_MODULE_0_vform__["AlertError"].name, __WEBPACK_IMPORTED_MODULE_0_vform__["AlertError"]);
+
+/***/ }),
+/* 210 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_progressbar__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_progressbar__);
+
+
+var options = {
+  color: '#bffaf3',
+  failedColor: '#874b4b',
+  thickness: '5px',
+  transition: {
+    speed: '0.2s',
+    opacity: '0.6s',
+    termination: 300
+  },
+  autoRevert: true,
+  location: 'left',
+  inverse: false
+};
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_progressbar___default.a, options);
 
 /***/ })
 /******/ ]);

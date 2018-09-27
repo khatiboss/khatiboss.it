@@ -8,8 +8,9 @@
 
                         <div class="card-tools">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addNewUserModalCenter">Add
-                                New<i class="fas fa-user-plus" title="Add User"></i></button>
+                            <!--button type="button" class="btn btn-success" data-toggle="modal" data-target="#userModalCenter"-->
+                            <button type="button" class="btn btn-success" @click="newUserModal">
+                                Add New<i class="fas fa-user-plus" title="Add User"></i></button>
 
                         </div>
                     </div>
@@ -32,7 +33,7 @@
                                     <td>{{ u.type | upFirstChar}}</td>
                                     <td>{{ u.created_at |dataFormatoItaliano }}</td>
                                     <td>
-                                        <a href="">
+                                        <a href="#" @click="editUserModal(u)">
                                             <i class="fa fa-edit" title="Edit"></i>
                                         </a>
                                         /
@@ -52,17 +53,22 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="addNewUserModalCenter" tabindex="-1" role="dialog" aria-labelledby="addNewUserModalCenterTitle"
+        <div class="modal fade" id="userModalCenter" tabindex="-1" role="dialog" aria-labelledby="userModalCenterTitle"
             aria-hidden="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title green" id="addNewUserModalCenterTitle">Add New</h5>
+                        <h5 v-show="!editMode" class="modal-title green" id="userModalCenterTitle">Add New</h5>
+                        <h5 v-show="editMode" class="modal-title green" id="userModalCenterTitle">Update User's Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form @submit.prevent="createUser">
+
+                    <!-- Show a danger alert with the list of errors for each field. -->
+                    <alert-errors :form="userForm" message="There were some problems with your input."></alert-errors>
+
+                    <form @submit.prevent="editMode ? updateUser() : createUser()">
                         <div class="modal-body">
                             <div class="form-group">
                                 <input v-model="userForm.name" type="text" placeholder="Name" id="name" name="name"
@@ -101,7 +107,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="reset" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button v-show="!editMode" type="submit" class="btn btn-primary">Create</button>
+                            <button v-show="editMode" type="submit" class="btn btn-success">Update</button>
                         </div>
                     </form>
                 </div>

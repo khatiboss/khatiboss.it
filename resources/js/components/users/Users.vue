@@ -29,13 +29,14 @@
                                     <td>{{ u.id }}</td>
                                     <td>{{ u.name }}</td>
                                     <td>{{ u.email }}</td>
-                                    <td>{{ u.type | upText}}</td>
+                                    <td>{{ u.type | upFirstChar}}</td>
                                     <td>{{ u.created_at |dataFormatoItaliano }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-edit" title="Edit"></i>
                                         </a>
-                                        <a href="">
+                                        /
+                                        <a href="" @click.prevent="deleteUser(u.id)">
                                             <i class="fa fa-trash red" title="Delete"></i>
                                         </a>
                                     </td>

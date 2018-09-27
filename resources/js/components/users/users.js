@@ -15,17 +15,55 @@ export default {
         }
     },
     methods: {
+        deleteUser(userId) {
+            swal({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+
+                //console.log(result);
+                if (result.value) {
+                    // sending delete request to the server
+                    this.userForm.delete('api/users/' + userId).then((risposta) => {
+                        //console.log(risposta.data.message);
+                        swal(
+                            'Deleted!',
+                            risposta.data.message,
+                            'success'
+                        )
+                        // reload page
+                        Fire.$emit('After_CRUD_Operation_Event');
+                    }).catch(() => {
+                        swal({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                        })
+
+                    });
+                }else{
+                    console.log(result.dismiss);
+                }
+
+            })
+        },
         loadUsers() {
             axios.get('api/users').then(
                 ({
                     data
                 }) => (this.users = data.data));
         },
+
         createUser() {
             this.$Progress.start();
 
             this.userForm.post('api/users').then(() => {
-                Fire.$emit('UserCreatedEvent');
+                Fire.$emit('After_CRUD_Operation_Event');
 
                 $('#addNewUserModalCenter').modal('hide')
 
@@ -55,7 +93,7 @@ export default {
         //setInterval(() => this.loadUsers(), 3000);
 
         //2nd - Call method on event 'UserCreatedEvent'
-        Fire.$on('UserCreatedEvent', () => {
+        Fire.$on('After_CRUD_Operation_Event', () => {
             this.loadUsers();
         });
 

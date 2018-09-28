@@ -30417,7 +30417,8 @@ var Test = {
 
 };var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     mode: 'history',
-    routes: __WEBPACK_IMPORTED_MODULE_0__routes__["a" /* routes */] // short for `routes: routes`
+    routes: __WEBPACK_IMPORTED_MODULE_0__routes__["a" /* routes */], // short for `routes: routes`
+    linkActiveClass: 'active' // It will active this class "router-link-exact-active" when click on menu.
 });
 
 //Public Access to Fire

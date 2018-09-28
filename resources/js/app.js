@@ -27,7 +27,8 @@ const Test = {
 
 const router = new VueRouter({
     mode: 'history',
-    routes // short for `routes: routes`
+    routes, // short for `routes: routes`
+    linkActiveClass: 'active' // It will active this class "router-link-exact-active" when click on menu.
 })
 
 //Public Access to Fire

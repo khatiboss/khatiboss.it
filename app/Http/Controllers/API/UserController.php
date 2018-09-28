@@ -27,7 +27,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::latest()->paginate(2);
+        return User::latest()->paginate(5);
+
     }
 
     /**
@@ -61,6 +62,57 @@ class UserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
     }
+
+
+    // show profile info
+    public function profile()
+    {
+        return auth('api')->user();
+    }
+
+    //update profile
+    public function updateProfile(Request $request)
+    {
+        $currentUser = auth('api')->user();
+
+        $this->validate($request,[
+            'name' => 'required|string|max:191',
+            'email' => 'required|email|max:191|unique:users,email,'. $currentUser->id,
+            'password' => 'sometimes|required|string|min:6',
+            'type' => '',
+            'bio' =>'',
+            'photo' =>'',
+
+        ]);
+
+
+        $currentPhoto = $currentUser->photo;
+
+        if($request->photo != $currentPhoto) {
+
+            $namePhoto = time().'.'.explode('/',explode(':',substr($request->photo, 0, strpos($request->photo,';')))[1])[1];
+            \Image::make($request->photo)->save(public_path('img/profiles/').$namePhoto);
+
+            $request->merge(['photo' => $namePhoto]);
+
+            $pathCurrentPhoto = public_path('img/profiles/').$currentPhoto;
+            if(file_exists($pathCurrentPhoto)){
+                @unlink($pathCurrentPhoto);
+            }
+        }
+
+
+        if(!empty($request->password)){
+            $hashPassword = Hash::make($request['password']);
+            $request->merge(['password' => $hashPassword]);
+        }
+
+
+        $currentUser->update($request->all());
+
+        return ['messageFromLaravel' => "Profile has been updated."];
+    }
+
 
     /**
      * Display the specified resource.

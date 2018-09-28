@@ -11,7 +11,7 @@ export const routes = [{
 },
 {
     path: '/profile',
-    component: require('./components/Profile.vue')
+    component: require('./components/profile/profile.vue')
 },
 {
     path: '/users',

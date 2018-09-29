@@ -4,13 +4,14 @@ export default {
     data() {
         return {
 
+            pathPhotoProfile: './img/profiles/',
             // Create a new form instance
             profileForm: new Form({
                 id: '',
                 name: '',
                 email: '',
                 password: '',
-                type: '',
+                role: '',
                 bio: '',
                 photo: ''
 
@@ -19,7 +20,7 @@ export default {
     },
     methods: {
         getProfilePhoto() {
-            return "./img/profiles/" + this.profileForm.photo
+            return this.pathPhotoProfile + this.profileForm.photo
         },
         uploadPhoto(event) {
             let file = event.target.files[0];
@@ -52,7 +53,7 @@ export default {
                 this.$Progress.finish();
 
                 // reload page
-                Fire.$emit('After_Update_Event');
+              //  Fire.$emit('After_Update_Event');
 
             }).catch(() => {
                 this.$Progress.fail()
@@ -72,9 +73,10 @@ export default {
     },
     created() {
         this.showProfile();
-
+/*
         Fire.$on('After_Update_Event', () => {
             this.showProfile();
         });
+        */
     }
 }

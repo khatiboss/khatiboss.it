@@ -59,12 +59,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('img/profile.png') }}" class="img-circle elevation-2" alt="{{ Auth::user()->name }}">
+                        <img src="{{ asset('img/profiles/'.Auth::user()->photo) }}" class="img-circle elevation-2" alt="{{ Auth::user()->name }}">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                        <router-link to="/profile" class="nav-link">
+                            {{ Auth::user()->name }}
+                        </router-link>
                     </div>
+
+
                 </div>
+
+
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
@@ -87,7 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!--li class="nav-item has-treeview menu-open"-->
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-sliders-h yellow"></i>
+                                <i class="nav-icon fas fa-cogs yellow"></i>
                                 <p>
                                     Management
                                     <i class="right fa fa-angle-left"></i>
@@ -96,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <router-link to="/users" class="nav-link">
-                                        <i class="nav-icon fas fa-users pink"></i>
+                                        <i class="nav-icon fas fa-user-cog pink"></i>
                                         <p>Users</p>
                                     </router-link>
                                 </li>

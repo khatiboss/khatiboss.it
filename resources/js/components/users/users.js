@@ -2,6 +2,7 @@ export default {
     data() {
         return {
             editMode: false,
+            pathUserPhoto : './img/profiles/',
             users: {},
             // Create a new form instance
             userForm: new Form({
@@ -9,7 +10,7 @@ export default {
                 name: '',
                 email: '',
                 password: '',
-                type: '',
+                role: '',
                 bio: '',
                 photo: ''
 
@@ -17,10 +18,33 @@ export default {
         }
     },
     methods: {
+        getUserPhotoPath(foto) {
+            return this.pathUserPhoto + foto;
+        },
         newUserModal() {
             this.editMode = false;
             this.userForm.reset();
             $('#userModalCenter').modal('show');
+        },
+        uploadPhoto(event) {
+            let file = event.target.files[0];
+            console.log(file);
+            let reader = new FileReader();
+            if (file['size'] < 2097152) {
+
+                reader.onloadend = (file) => {
+                    console.log('RESULT: ', reader.result)
+                    this.userForm.photo = reader.result;
+                }
+                reader.readAsDataURL(file);
+
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'You are uploading a large file!',
+                })
+            }
         },
         createUser() {
             this.$Progress.start();
@@ -59,7 +83,7 @@ export default {
             this.$Progress.start();
             this.userForm.put('api/users/' + this.userForm.id).then((risposta) => {
                 Fire.$emit('After_CRUD_Operation_Event');
-                
+
                 $('#userModalCenter').modal('hide')
 
                 toast({

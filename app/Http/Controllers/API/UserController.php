@@ -44,23 +44,36 @@ class UserController extends Controller
             'name' => 'required|string|max:191',
             'email' => 'required|email|max:191|unique:users',
             'password' => 'required|string|min:6',
-            'type' => '',
+            'role' => '',
             'bio' =>'',
-            'photo' =>'',
+            'photo' =>'nullable|image|size:2048',
 
         ]);
 
         //return ['message' => "I have your data"];
         //return $request->all();
 
+        $role = empty($request['role']) ? 'user' : $request['role'];
+
+        $photoReceived = $request->photo;
+
+        if(empty($photoReceived)) {
+            $namePhotoToSave ='profile.png';
+        } else {
+            $namePhotoToSave = time().'.'.explode('/',explode(':',substr($photoReceived, 0, strpos($photoReceived,';')))[1])[1];
+            \Image::make($photoReceived)->save(public_path('img/profiles/').$namePhotoToSave);
+        }
+
         return User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => $request['photo'],
-            'type' => $request['type'],
+            'role' => $role,
             'bio' => $request['bio'],
             'password' => Hash::make($request['password']),
+            'photo' => $namePhotoToSave
         ]);
+
     }
 
 
@@ -79,9 +92,9 @@ class UserController extends Controller
             'name' => 'required|string|max:191',
             'email' => 'required|email|max:191|unique:users,email,'. $currentUser->id,
             'password' => 'sometimes|required|string|min:6',
-            'type' => '',
+            'role' => '',
             'bio' =>'',
-            'photo' =>'',
+            'photo' => '',
 
         ]);
 
@@ -95,10 +108,14 @@ class UserController extends Controller
 
             $request->merge(['photo' => $namePhoto]);
 
-            $pathCurrentPhoto = public_path('img/profiles/').$currentPhoto;
-            if(file_exists($pathCurrentPhoto)){
-                @unlink($pathCurrentPhoto);
+            if($currentPhoto != 'profile.png'){
+
+                $pathCurrentPhoto = public_path('img/profiles/').$currentPhoto;
+                if(file_exists($pathCurrentPhoto)){
+                    @unlink($pathCurrentPhoto);
+                }
             }
+
         }
 
 
@@ -140,13 +157,39 @@ class UserController extends Controller
         $this->validate($request,[
             'name' => 'required|string|max:191',
             'email' => 'required|email|max:191|unique:users,email,'. $user->id,
-            'password' => 'sometimes|string|min:6',
-            'type' => '',
+            'password' => 'sometimes|required|string|min:6',
+            'role' => '',
             'bio' =>'',
             'photo' =>'',
 
         ]);
-            $user->update($request->all());
+
+        $currentPhoto = $user->photo;
+
+        if($request->photo != $currentPhoto) {
+
+            $namePhoto = time().'.'.explode('/',explode(':',substr($request->photo, 0, strpos($request->photo,';')))[1])[1];
+            \Image::make($request->photo)->save(public_path('img/profiles/').$namePhoto);
+
+            $request->merge(['photo' => $namePhoto]);
+
+            if($currentPhoto != 'profile.png'){
+
+                $pathCurrentPhoto = public_path('img/profiles/').$currentPhoto;
+                if(file_exists($pathCurrentPhoto)){
+                    @unlink($pathCurrentPhoto);
+                }
+            }
+
+        }
+
+
+        if(!empty($request->password)){
+            $hashPassword = Hash::make($request['password']);
+            $request->merge(['password' => $hashPassword]);
+        }
+
+        $user->update($request->all());
 
         return ['messageFromLaravel' => "User's Info has been updated."];
     }

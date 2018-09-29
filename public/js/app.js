@@ -4574,7 +4574,7 @@
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)(module)))
 
 /***/ }),
 /* 1 */
@@ -4917,12 +4917,6 @@ module.exports = g;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(144);
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -5024,7 +5018,7 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -5133,7 +5127,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -5161,7 +5155,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7702,7 +7696,7 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18071,6 +18065,12 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(144);
 
 /***/ }),
 /* 9 */
@@ -30440,7 +30440,7 @@ var app = new Vue({
 
 
 window._ = __webpack_require__(141);
-window.Popper = __webpack_require__(7).default;
+window.Popper = __webpack_require__(6).default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -30449,7 +30449,7 @@ window.Popper = __webpack_require__(7).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(8);
+  window.$ = window.jQuery = __webpack_require__(7);
 
   __webpack_require__(142);
   __webpack_require__(143);
@@ -30461,7 +30461,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+window.axios = __webpack_require__(8);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -47609,7 +47609,7 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(6)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(5)(module)))
 
 /***/ }),
 /* 142 */
@@ -47621,7 +47621,7 @@ if (token) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(8), __webpack_require__(7)) :
+   true ? factory(exports, __webpack_require__(7), __webpack_require__(6)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -51583,7 +51583,7 @@ if (token) {
 var utils = __webpack_require__(1);
 var bind = __webpack_require__(9);
 var Axios = __webpack_require__(146);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 
 /**
  * Create an instance of Axios
@@ -51666,7 +51666,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 var utils = __webpack_require__(1);
 var InterceptorManager = __webpack_require__(155);
 var dispatchRequest = __webpack_require__(156);
@@ -52205,7 +52205,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(1);
 var transformData = __webpack_require__(157);
 var isCancel = __webpack_require__(13);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 var isAbsoluteURL = __webpack_require__(158);
 var combineURLs = __webpack_require__(159);
 
@@ -64073,7 +64073,7 @@ module.exports = __webpack_require__("lVK7");
 /***/ "OMN4":
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(8);
 
 /***/ }),
 
@@ -68811,7 +68811,7 @@ var routes = [{
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(175)
 /* template */
@@ -68934,7 +68934,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(178)
 }
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(183)
 /* template */
@@ -69365,7 +69365,7 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
@@ -69373,13 +69373,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
 
+            pathPhotoProfile: './img/profiles/',
             // Create a new form instance
             profileForm: new Form({
                 id: '',
                 name: '',
                 email: '',
                 password: '',
-                type: '',
+                role: '',
                 bio: '',
                 photo: ''
 
@@ -69389,7 +69390,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         getProfilePhoto: function getProfilePhoto() {
-            return "./img/profiles/" + this.profileForm.photo;
+            return this.pathPhotoProfile + this.profileForm.photo;
         },
         uploadPhoto: function uploadPhoto(event) {
             var _this = this;
@@ -69425,7 +69426,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this2.$Progress.finish();
 
                 // reload page
-                Fire.$emit('After_Update_Event');
+                //  Fire.$emit('After_Update_Event');
             }).catch(function () {
                 _this2.$Progress.fail();
             });
@@ -69444,13 +69445,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('Component mounted.');
     },
     created: function created() {
-        var _this4 = this;
-
         this.showProfile();
-
-        Fire.$on('After_Update_Event', function () {
-            _this4.showProfile();
-        });
+        /*
+                Fire.$on('After_Update_Event', () => {
+                    this.showProfile();
+                });
+                */
     }
 });
 
@@ -69511,6 +69511,13 @@ var render = function() {
                   attrs: { id: "settings" }
                 },
                 [
+                  _c("alert-errors", {
+                    attrs: {
+                      form: _vm.profileForm,
+                      message: "There were some problems with your input."
+                    }
+                  }),
+                  _vm._v(" "),
                   _c("form", { staticClass: "form-horizontal" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c(
@@ -69533,6 +69540,9 @@ var render = function() {
                             }
                           ],
                           staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.profileForm.errors.has("name")
+                          },
                           attrs: {
                             type: "text",
                             id: "inputName",
@@ -69573,12 +69583,15 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.profileForm.type,
-                                expression: "profileForm.type"
+                                value: _vm.profileForm.role,
+                                expression: "profileForm.role"
                               }
                             ],
                             staticClass: "form-control",
-                            attrs: { id: "inputRole", name: "type" },
+                            class: {
+                              "is-invalid": _vm.profileForm.errors.has("role")
+                            },
+                            attrs: { id: "inputRole", name: "role" },
                             on: {
                               change: function($event) {
                                 var $$selectedVal = Array.prototype.filter
@@ -69591,7 +69604,7 @@ var render = function() {
                                   })
                                 _vm.$set(
                                   _vm.profileForm,
-                                  "type",
+                                  "role",
                                   $event.target.multiple
                                     ? $$selectedVal
                                     : $$selectedVal[0]
@@ -69600,20 +69613,18 @@ var render = function() {
                             }
                           },
                           [
-                            _c("option", { attrs: { value: "" } }, [
-                              _vm._v("Select User Role")
-                            ]),
+                            _c(
+                              "option",
+                              { attrs: { disabled: "", value: "" } },
+                              [_vm._v("Select User Role")]
+                            ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "admin" } }, [
-                              _vm._v("Admin")
+                              _vm._v("Administrator")
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "user" } }, [
                               _vm._v("Standard User")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "author" } }, [
-                              _vm._v("Author")
                             ])
                           ]
                         )
@@ -69641,6 +69652,9 @@ var render = function() {
                             }
                           ],
                           staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.profileForm.errors.has("email")
+                          },
                           attrs: {
                             type: "email",
                             id: "inputEmail",
@@ -69684,6 +69698,9 @@ var render = function() {
                             }
                           ],
                           staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.profileForm.errors.has("bio")
+                          },
                           attrs: {
                             id: "inputBiography",
                             placeholder: "Biography"
@@ -69706,19 +69723,15 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-sm-10 control-label",
-                          attrs: { for: "inputPhoto" }
-                        },
-                        [_vm._v("Profile Photo")]
-                      ),
+                      _vm._m(3),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-sm-10" }, [
                         _c("div", { staticClass: "custom-file" }, [
                           _c("input", {
                             staticClass: "custom-file-input",
+                            class: {
+                              "is-invalid": _vm.profileForm.errors.has("photo")
+                            },
                             attrs: { type: "file", id: "inputPhoto" },
                             on: { change: _vm.uploadPhoto }
                           }),
@@ -69727,9 +69740,9 @@ var render = function() {
                             "label",
                             {
                               staticClass: "custom-file-label",
-                              attrs: { for: "photo" }
+                              attrs: { for: "inputPhoto" }
                             },
-                            [_vm._v("Choose file Max 2 MB!")]
+                            [_vm._v("Choose file")]
                           )
                         ])
                       ])
@@ -69760,6 +69773,9 @@ var render = function() {
                             }
                           ],
                           staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.profileForm.errors.has("password")
+                          },
                           attrs: {
                             type: "password",
                             id: "inputPassword",
@@ -69789,19 +69805,15 @@ var render = function() {
                           {
                             staticClass: "btn btn-success",
                             attrs: { type: "submit" },
-                            on: {
-                              click: function($event) {
-                                $event.preventDefault()
-                                return _vm.updateProfile($event)
-                              }
-                            }
+                            on: { click: _vm.updateProfile }
                           },
                           [_vm._v("Update")]
                         )
                       ])
                     ])
                   ])
-                ]
+                ],
+                1
               )
             ])
           ])
@@ -69819,29 +69831,28 @@ var staticRenderFns = [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm-4 border-right" }, [
           _c("div", { staticClass: "description-block" }, [
-            _c("h5", { staticClass: "description-header" }, [_vm._v("3,200")]),
+            _c("h5", { staticClass: "description-header" }, [_vm._v("0")]),
             _vm._v(" "),
-            _c("span", { staticClass: "description-text" }, [_vm._v("SALES")])
+            _c("span", { staticClass: "description-text" }, [_vm._v("..")])
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm-4 border-right" }, [
           _c("div", { staticClass: "description-block" }, [
-            _c("h5", { staticClass: "description-header" }, [_vm._v("13,000")]),
+            _c("h5", { staticClass: "description-header" }, [_vm._v("0")]),
             _vm._v(" "),
             _c("span", { staticClass: "description-text" }, [
-              _vm._v("FOLLOWERS")
+              _c("i", { staticClass: "fas fa-envelope" }),
+              _vm._v(" Messages")
             ])
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm-4" }, [
           _c("div", { staticClass: "description-block" }, [
-            _c("h5", { staticClass: "description-header" }, [_vm._v("35")]),
+            _c("h5", { staticClass: "description-header" }, [_vm._v("0")]),
             _vm._v(" "),
-            _c("span", { staticClass: "description-text" }, [
-              _vm._v("PRODUCTS")
-            ])
+            _c("span", { staticClass: "description-text" }, [_vm._v("..")])
           ])
         ])
       ])
@@ -70040,6 +70051,20 @@ var staticRenderFns = [
         _c("li", [_c("i", { staticClass: "fa fa-clock-o bg-gray" })])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "col-sm-10 control-label", attrs: { for: "inputPhoto" } },
+      [
+        _vm._v("Profile Photo ("),
+        _c("span", { staticClass: "red" }, [_vm._v("Max size 2 MB!")]),
+        _vm._v(")")
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -70056,7 +70081,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(5)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 var __vue_script__ = __webpack_require__(186)
 /* template */
@@ -70108,6 +70133,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             editMode: false,
+            pathUserPhoto: './img/profiles/',
             users: {},
             // Create a new form instance
             userForm: new Form({
@@ -70115,7 +70141,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 name: '',
                 email: '',
                 password: '',
-                type: '',
+                role: '',
                 bio: '',
                 photo: ''
 
@@ -70124,13 +70150,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        getUserPhotoPath: function getUserPhotoPath(foto) {
+            return this.pathUserPhoto + foto;
+        },
         newUserModal: function newUserModal() {
             this.editMode = false;
             this.userForm.reset();
             $('#userModalCenter').modal('show');
         },
-        createUser: function createUser() {
+        uploadPhoto: function uploadPhoto(event) {
             var _this = this;
+
+            var file = event.target.files[0];
+            console.log(file);
+            var reader = new FileReader();
+            if (file['size'] < 2097152) {
+
+                reader.onloadend = function (file) {
+                    console.log('RESULT: ', reader.result);
+                    _this.userForm.photo = reader.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'You are uploading a large file!'
+                });
+            }
+        },
+        createUser: function createUser() {
+            var _this2 = this;
 
             this.$Progress.start();
 
@@ -70144,10 +70194,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     title: 'User created successfully'
                 });
 
-                _this.$Progress.finish();
+                _this2.$Progress.finish();
             }).catch(function (error) {
                 console.log(error.message);
-                _this.$Progress.fail();
+                _this2.$Progress.fail();
             });
         },
         editUserModal: function editUserModal(userObject) {
@@ -70161,7 +70211,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.userForm.fill(userObject);
         },
         updateUser: function updateUser() {
-            var _this2 = this;
+            var _this3 = this;
 
             //console.log('Update user');
             this.$Progress.start();
@@ -70174,13 +70224,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     type: 'success',
                     title: risposta.data.messageFromLaravel
                 });
-                _this2.$Progress.finish();
+                _this3.$Progress.finish();
             }).catch(function () {
-                _this2.$Progress.fail();
+                _this3.$Progress.fail();
             });
         },
         deleteUser: function deleteUser(userId) {
-            var _this3 = this;
+            var _this4 = this;
 
             swal({
                 title: 'Are you sure?',
@@ -70195,7 +70245,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 //console.log(result);
                 if (result.value) {
                     // sending delete request to the server
-                    _this3.userForm.delete('api/users/' + userId).then(function (risposta) {
+                    _this4.userForm.delete('api/users/' + userId).then(function (risposta) {
                         //console.log(risposta.data.messageFromLaravel);
                         swal('Deleted!', risposta.data.messageFromLaravel, 'success');
                         // reload page
@@ -70213,11 +70263,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         loadUsers: function loadUsers() {
-            var _this4 = this;
+            var _this5 = this;
 
             axios.get('api/users').then(function (_ref) {
                 var data = _ref.data;
-                return _this4.users = data.data;
+                return _this5.users = data.data;
             });
         }
     },
@@ -70225,7 +70275,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('Component mounted.');
     },
     created: function created() {
-        var _this5 = this;
+        var _this6 = this;
 
         //On loading/efresh a page
         this.loadUsers();
@@ -70235,7 +70285,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         //2nd - Call method on event 'UserCreatedEvent'
         Fire.$on('After_CRUD_Operation_Event', function () {
-            _this5.loadUsers();
+            _this6.loadUsers();
         });
 
         //3rd - It can call method with pusher (pusher.com)
@@ -70255,7 +70305,7 @@ var render = function() {
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [_vm._v("Users List")]),
+            _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "card-tools" }, [
               _c(
@@ -70281,17 +70331,26 @@ var render = function() {
               _c(
                 "tbody",
                 [
-                  _vm._m(0),
+                  _vm._m(1),
                   _vm._v(" "),
                   _vm._l(_vm.users, function(u) {
                     return _c("tr", { key: u.id }, [
-                      _c("td", [_vm._v(_vm._s(u.id))]),
+                      _c("td", [
+                        _c("img", {
+                          staticClass: "img-circle",
+                          attrs: {
+                            src: _vm.getUserPhotoPath(u.photo),
+                            alt: "",
+                            width: "35px"
+                          }
+                        })
+                      ]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(u.name))]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(u.email))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm._f("upFirstChar")(u.type)))]),
+                      _c("td", [_vm._v(_vm._s(_vm._f("upFirstChar")(u.role)))]),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
@@ -70370,408 +70429,402 @@ var render = function() {
             attrs: { role: "document" }
           },
           [
-            _c(
-              "div",
-              { staticClass: "modal-content" },
-              [
-                _c("div", { staticClass: "modal-header" }, [
-                  _c(
-                    "h5",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: !_vm.editMode,
-                          expression: "!editMode"
-                        }
-                      ],
-                      staticClass: "modal-title green",
-                      attrs: { id: "userModalCenterTitle" }
-                    },
-                    [_vm._v("Add New")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h5",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.editMode,
-                          expression: "editMode"
-                        }
-                      ],
-                      staticClass: "modal-title green",
-                      attrs: { id: "userModalCenterTitle" }
-                    },
-                    [_vm._v("Update User's Info")]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(1)
-                ]),
-                _vm._v(" "),
-                _c("alert-errors", {
-                  attrs: {
-                    form: _vm.userForm,
-                    message: "There were some problems with your input."
-                  }
-                }),
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-header" }, [
+                _c(
+                  "h5",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: !_vm.editMode,
+                        expression: "!editMode"
+                      }
+                    ],
+                    staticClass: "modal-title green",
+                    attrs: { id: "userModalCenterTitle" }
+                  },
+                  [_vm._v("Add New")]
+                ),
                 _vm._v(" "),
                 _c(
-                  "form",
+                  "h5",
                   {
-                    on: {
-                      submit: function($event) {
-                        $event.preventDefault()
-                        _vm.editMode ? _vm.updateUser() : _vm.createUser()
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.editMode,
+                        expression: "editMode"
                       }
-                    }
+                    ],
+                    staticClass: "modal-title green",
+                    attrs: { id: "userModalCenterTitle" }
                   },
-                  [
-                    _c("div", { staticClass: "modal-body" }, [
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.name,
-                                expression: "userForm.name"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("name")
-                            },
-                            attrs: {
-                              type: "text",
-                              placeholder: "Name",
-                              id: "name",
-                              name: "name"
-                            },
-                            domProps: { value: _vm.userForm.name },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "name",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "name" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.email,
-                                expression: "userForm.email"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("email")
-                            },
-                            attrs: {
-                              type: "email",
-                              placeholder: "Email Address",
-                              id: "email",
-                              name: "email"
-                            },
-                            domProps: { value: _vm.userForm.email },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "email",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "email" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.password,
-                                expression: "userForm.password"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("password")
-                            },
-                            attrs: {
-                              placeholder: "Password",
-                              type: "password",
-                              id: "password",
-                              name: "password"
-                            },
-                            domProps: { value: _vm.userForm.password },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "password",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "password" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c(
-                            "select",
-                            {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.userForm.type,
-                                  expression: "userForm.type"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              class: {
-                                "is-invalid": _vm.userForm.errors.has("type")
-                              },
-                              attrs: { id: "type", name: "type" },
-                              on: {
-                                change: function($event) {
-                                  var $$selectedVal = Array.prototype.filter
-                                    .call($event.target.options, function(o) {
-                                      return o.selected
-                                    })
-                                    .map(function(o) {
-                                      var val =
-                                        "_value" in o ? o._value : o.value
-                                      return val
-                                    })
-                                  _vm.$set(
-                                    _vm.userForm,
-                                    "type",
-                                    $event.target.multiple
-                                      ? $$selectedVal
-                                      : $$selectedVal[0]
-                                  )
-                                }
-                              }
-                            },
-                            [
-                              _c("option", { attrs: { value: "" } }, [
-                                _vm._v("Select User Role")
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "admin" } }, [
-                                _vm._v("Admin")
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "user" } }, [
-                                _vm._v("Standard User")
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "author" } }, [
-                                _vm._v("Author")
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "type" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("textarea", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.bio,
-                                expression: "userForm.bio"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("bio")
-                            },
-                            attrs: {
-                              placeholder: "Short Bio for user (Optional)",
-                              id: "bio",
-                              name: "bio"
-                            },
-                            domProps: { value: _vm.userForm.bio },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "bio",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "bio" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.userForm.photo,
-                                expression: "userForm.photo"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.userForm.errors.has("photo")
-                            },
-                            attrs: {
-                              type: "text",
-                              placeholder: "Photo",
-                              id: "photo",
-                              name: "photo"
-                            },
-                            domProps: { value: _vm.userForm.photo },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.userForm,
-                                  "photo",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.userForm, field: "photo" }
-                          })
-                        ],
-                        1
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "modal-footer" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger",
-                          attrs: { type: "reset", "data-dismiss": "modal" }
-                        },
-                        [_vm._v("Close")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
+                  [_vm._v("Update User's Info")]
+                ),
+                _vm._v(" "),
+                _vm._m(2)
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      _vm.editMode ? _vm.updateUser() : _vm.createUser()
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "modal-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
                           directives: [
                             {
-                              name: "show",
-                              rawName: "v-show",
-                              value: !_vm.editMode,
-                              expression: "!editMode"
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.name,
+                              expression: "userForm.name"
                             }
                           ],
-                          staticClass: "btn btn-primary",
-                          attrs: { type: "submit" }
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("name")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Name",
+                            id: "name",
+                            name: "name"
+                          },
+                          domProps: { value: _vm.userForm.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "name" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.userForm.email,
+                            expression: "userForm.email"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.userForm.errors.has("email")
                         },
-                        [_vm._v("Create")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
+                        attrs: {
+                          type: "email",
+                          placeholder: "Email Address",
+                          id: "email",
+                          name: "email"
+                        },
+                        domProps: { value: _vm.userForm.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.userForm, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("input", {
                           directives: [
                             {
                               name: "show",
                               rawName: "v-show",
                               value: _vm.editMode,
                               expression: "editMode"
+                            },
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.password,
+                              expression: "userForm.password"
                             }
                           ],
-                          staticClass: "btn btn-success",
-                          attrs: { type: "submit" }
-                        },
-                        [_vm._v("Update")]
-                      )
-                    ])
-                  ]
-                )
-              ],
-              1
-            )
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("password")
+                          },
+                          attrs: {
+                            placeholder:
+                              "Password (leave empty if not changing)",
+                            type: "password",
+                            id: "password",
+                            name: "password"
+                          },
+                          domProps: { value: _vm.userForm.password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.editMode,
+                              expression: "!editMode"
+                            },
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.password,
+                              expression: "userForm.password"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("password")
+                          },
+                          attrs: {
+                            placeholder: "Password",
+                            type: "password",
+                            id: "password",
+                            name: "password"
+                          },
+                          domProps: { value: _vm.userForm.password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.userForm,
+                                "password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "password" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.userForm.role,
+                                expression: "userForm.role"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.userForm.errors.has("role")
+                            },
+                            attrs: { id: "role", name: "role" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.userForm,
+                                  "role",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              { attrs: { disabled: "", value: "" } },
+                              [_vm._v("Select User Role")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "admin" } }, [
+                              _vm._v("Administrator")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "user" } }, [
+                              _vm._v("Standard User")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "role" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userForm.bio,
+                              expression: "userForm.bio"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.userForm.errors.has("bio")
+                          },
+                          attrs: {
+                            placeholder: "Short Bio for user (Optional)",
+                            id: "bio",
+                            name: "bio"
+                          },
+                          domProps: { value: _vm.userForm.bio },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.userForm, "bio", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "bio" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("div", { staticClass: "custom-file" }, [
+                          _c("input", {
+                            staticClass: "custom-file-input",
+                            class: {
+                              "is-invalid": _vm.userForm.errors.has("photo")
+                            },
+                            attrs: { type: "file", id: "inputPhoto" },
+                            on: { change: _vm.uploadPhoto }
+                          }),
+                          _vm._v(" "),
+                          _vm._m(3)
+                        ]),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.userForm, field: "photo" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "modal-footer" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "reset", "data-dismiss": "modal" }
+                      },
+                      [_vm._v("Close")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: !_vm.editMode,
+                            expression: "!editMode"
+                          }
+                        ],
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Create")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.editMode,
+                            expression: "editMode"
+                          }
+                        ],
+                        staticClass: "btn btn-success",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Update")]
+                    )
+                  ])
+                ]
+              )
+            ])
           ]
         )
       ]
@@ -70783,14 +70836,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "card-title" }, [
+      _c("i", { staticClass: "nav-icon fas fa-users pink" }, [
+        _vm._v(" Users List")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("tr", [
-      _c("th", [_vm._v("ID")]),
+      _c("th", [_vm._v("#")]),
       _vm._v(" "),
       _c("th", [_vm._v("Name")]),
       _vm._v(" "),
       _c("th", [_vm._v("Email")]),
       _vm._v(" "),
-      _c("th", [_vm._v("Type")]),
+      _c("th", [_vm._v("Role")]),
       _vm._v(" "),
       _c("th", [_vm._v("Registered at")]),
       _vm._v(" "),
@@ -70812,6 +70875,22 @@ var staticRenderFns = [
         }
       },
       [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "custom-file-label", attrs: { for: "photo" } },
+      [
+        _vm._v("Choose file ("),
+        _c("span", { staticClass: "red" }, [
+          _vm._v("Max\n                                        size 2 MB!")
+        ]),
+        _vm._v(" )")
+      ]
     )
   }
 ]

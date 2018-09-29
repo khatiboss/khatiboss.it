@@ -23,25 +23,26 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-sm-4 border-right">
+
                                 <div class="description-block">
-                                    <h5 class="description-header">3,200</h5>
-                                    <span class="description-text">SALES</span>
+                                    <h5 class="description-header">0</h5>
+                                    <span class="description-text">..</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">13,000</h5>
-                                    <span class="description-text">FOLLOWERS</span>
+                                    <h5 class="description-header">0</h5>
+                                    <span class="description-text"><i class="fas fa-envelope"></i> Messages</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4">
                                 <div class="description-block">
-                                    <h5 class="description-header">35</h5>
-                                    <span class="description-text">PRODUCTS</span>
+                                    <h5 class="description-header">0</h5>
+                                    <span class="description-text">..</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
@@ -166,54 +167,63 @@
                             <!-- /.tab-pane -->
 
                             <div class="tab-pane active show" id="settings">
+
+                                <alert-errors :form="profileForm" message="There were some problems with your input."></alert-errors>
+
                                 <form class="form-horizontal">
                                     <div class="form-group">
                                         <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                                         <div class="col-sm-10">
                                             <input v-model="profileForm.name" type="text" class="form-control" id="inputName"
-                                                placeholder="Name">
+                                                placeholder="Name" :class="{ 'is-invalid': profileForm.errors.has('name') }">
                                         </div>
+                                        <!-- <has-error :form="profileForm" field="name"></has-error> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="inputRole" class="col-sm-2 control-label">Role</label>
 
                                         <div class="col-sm-10">
-                                            <select v-model="profileForm.type" id="inputRole" name="type" class="form-control">
-                                                <option value="">Select User Role</option>
-                                                <option value="admin">Admin</option>
+                                            <select v-model="profileForm.role" id="inputRole" name="role" class="form-control"
+                                                :class="{ 'is-invalid': profileForm.errors.has('role') }">
+                                                <option disabled value="">Select User Role</option>
+                                                <option value="admin">Administrator</option>
                                                 <option value="user">Standard User</option>
-                                                <option value="author">Author</option>
+                                                <!--option value="author">Author</option-->
                                             </select>
                                         </div>
+                                        <!-- <has-error :form="profileForm" field="role"></has-error> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-
                                         <div class="col-sm-10">
                                             <input v-model="profileForm.email" type="email" class="form-control" id="inputEmail"
-                                                placeholder="Email">
+                                                placeholder="Email" :class="{ 'is-invalid': profileForm.errors.has('email') }">
                                         </div>
+                                        <!-- <has-error :form="profileForm" field="email"></has-error> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="inputBiography" class="col-sm-2 control-label">Biography</label>
 
                                         <div class="col-sm-10">
                                             <textarea v-model="profileForm.bio" class="form-control" id="inputBiography"
-                                                placeholder="Biography"></textarea>
+                                                placeholder="Biography" :class="{ 'is-invalid': profileForm.errors.has('bio') }"></textarea>
                                         </div>
+                                        <!-- <has-error :form="profileForm" field="bio"></has-error> -->
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPhoto" class="col-sm-10 control-label">Profile Photo</label>
+                                        <label for="inputPhoto" class="col-sm-10 control-label">Profile Photo (<span
+                                                class="red">Max size 2 MB!</span>)</label>
                                         <div class="col-sm-10">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input"
-                                                    id="inputPhoto" @change="uploadPhoto">
-                                                <label class="custom-file-label" for="photo">Choose file Max 2 MB!</label>
+                                                <input type="file" class="custom-file-input" id="inputPhoto" @change="uploadPhoto"
+                                                    :class="{ 'is-invalid': profileForm.errors.has('photo') }">
+                                                <label class="custom-file-label" for="inputPhoto">Choose file</label>
                                             </div>
                                             <!--div class="input-group-append">
                                                 <span class="input-group-text" id="">Upload</span>
                                             </div-->
+                                            <!-- <has-error :form="profileForm" field="photo"></has-error> -->
                                         </div>
                                     </div>
 
@@ -221,15 +231,15 @@
                                         <label for="inputPassword" class="col-sm-10 control-label">Password (leave
                                             empty
                                             if not changing)</label>
-
                                         <div class="col-sm-10">
                                             <input v-model="profileForm.password" type="password" class="form-control"
-                                                id="inputPassword" placeholder="Password">
+                                                id="inputPassword" placeholder="Password" :class="{ 'is-invalid': profileForm.errors.has('password') }">
                                         </div>
+                                        <!-- <has-error :form="profileForm" field="password"></has-error> -->
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
-                                            <button @click.prevent="updateProfile" type="submit" class="btn btn-success">Update</button>
+                                            <button @click="updateProfile" type="submit" class="btn btn-success">Update</button>
                                         </div>
                                     </div>
                                 </form>

@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><i class="nav-icon fas fa-users pink"> Users List</i></h3>
+                        <h3 class="card-title"><i class="nav-icon fas fa-users indigo"> Users List</i></h3>
 
                         <div class="card-tools">
                             <!-- Button trigger modal -->
@@ -38,7 +38,8 @@
                                         </a>
                                         /
                                         <a href="" @click.prevent="deleteUser(u.id)">
-                                            <i class="fa fa-trash red" title="Delete"></i>
+                                            <!-- <i class="fa fa-trash red" title="Delete"></i> -->
+                                            <i class="fas fa-user-times pink" title="Soft Delete"></i>
                                         </a>
                                     </td>
                                 </tr>
@@ -78,13 +79,12 @@
                             <div class="form-group">
                                 <input v-model="userForm.email" type="email" placeholder="Email Address" id="email"
                                     name="email" class="form-control" :class="{ 'is-invalid': userForm.errors.has('email') }">
-                                <!-- <has-error :form="userForm" field="email"></has-error> -->
+                                <has-error :form="userForm" field="email"></has-error>
                             </div>
                             <div class="form-group">
-                                <input v-show="editMode" v-model="userForm.password" placeholder="Password (leave empty if not changing)"
+                                <span v-show="editMode" class="orange">(leave empty if not changing)</span>
+                                <input v-model="userForm.password" placeholder="Password"
                                     type="password" id="password" name="password" class="form-control" :class="{ 'is-invalid': userForm.errors.has('password') }">
-                                <input v-show="!editMode" v-model="userForm.password" placeholder="Password" type="password"
-                                    id="password" name="password" class="form-control" :class="{ 'is-invalid': userForm.errors.has('password') }">
                                 <has-error :form="userForm" field="password"></has-error>
                             </div>
                             <div class="form-group">

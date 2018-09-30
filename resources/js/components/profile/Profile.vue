@@ -74,7 +74,7 @@
                                     <!-- timeline time label -->
                                     <li class="time-label">
                                         <span class="bg-danger">
-                                            10 Feb. 2014
+                                            08 Ott. 2018
                                         </span>
                                     </li>
                                     <!-- /.timeline-label -->
@@ -83,9 +83,9 @@
                                         <i class="fa fa-envelope bg-primary"></i>
 
                                         <div class="timeline-item">
-                                            <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i> 08:30</span>
 
-                                            <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+                                            <h3 class="timeline-header"><a href="#">C&C Group</a> Service Engineer</h3>
 
                                             <div class="timeline-body">
                                                 Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
@@ -100,65 +100,7 @@
                                         </div>
                                     </li>
                                     <!-- END timeline item -->
-                                    <!-- timeline item -->
-                                    <li>
-                                        <i class="fa fa-user bg-info"></i>
 
-                                        <div class="timeline-item">
-                                            <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-                                            <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted
-                                                your friend request
-                                            </h3>
-                                        </div>
-                                    </li>
-                                    <!-- END timeline item -->
-                                    <!-- timeline item -->
-                                    <li>
-                                        <i class="fa fa-comments bg-warning"></i>
-
-                                        <div class="timeline-item">
-                                            <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-                                            <h3 class="timeline-header"><a href="#">Jay White</a> commented on your
-                                                post</h3>
-
-                                            <div class="timeline-body">
-                                                Take me to your leader!
-                                                Switzerland is small and neutral!
-                                                We are more like Germany, ambitious and misunderstood!
-                                            </div>
-                                            <div class="timeline-footer">
-                                                <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- END timeline item -->
-                                    <!-- timeline time label -->
-                                    <li class="time-label">
-                                        <span class="bg-success">
-                                            3 Jan. 2014
-                                        </span>
-                                    </li>
-                                    <!-- /.timeline-label -->
-                                    <!-- timeline item -->
-                                    <li>
-                                        <i class="fa fa-camera bg-purple"></i>
-
-                                        <div class="timeline-item">
-                                            <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-
-                                            <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                                            <div class="timeline-body">
-                                                <img src="" alt="..." class="margin">
-                                                <img src="" alt="..." class="margin">
-                                                <img src="" alt="..." class="margin">
-                                                <img src="" alt="..." class="margin">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- END timeline item -->
                                     <li>
                                         <i class="fa fa-clock-o bg-gray"></i>
                                     </li>
@@ -214,10 +156,13 @@
                                     <div class="form-group">
                                         <label for="inputPhoto" class="col-sm-10 control-label">Profile Photo (<span
                                                 class="red">Max size 2 MB!</span>)</label>
+
                                         <div class="col-sm-10">
+
                                             <div class="custom-file">
+
                                                 <input type="file" class="custom-file-input" id="inputPhoto" @change="uploadPhoto"
-                                                    :class="{ 'is-invalid': profileForm.errors.has('photo') }">
+                                                    :class="{ 'is-invalid': profileForm.errors.has('photo') }" name="profileForm.photo">
                                                 <label class="custom-file-label" for="inputPhoto">Choose file</label>
                                             </div>
                                             <!--div class="input-group-append">

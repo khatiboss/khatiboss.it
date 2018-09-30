@@ -102,15 +102,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <router-link to="/users" class="nav-link">
-                                        <i class="nav-icon fas fa-user-cog pink"></i>
+                                        <i class="nav-icon fas fa-user-cog indigo"></i>
                                         <p>Users</p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Inactive Page</p>
-                                    </a>
+                                    <router-link to="/softUsers" class="nav-link">
+                                        <i class="nav-icon fas fa-user-slash pink"></i>
+                                        <p>Soft Users</p>
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>

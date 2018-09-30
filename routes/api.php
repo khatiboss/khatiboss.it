@@ -23,6 +23,10 @@ Route::apiResources([
     'users' => 'API\UserController',
 ]);
 
+Route::get('/softUsers','API\UserController@softUsersList');
+Route::delete('/deleteUserPermanently/{userId}','API\UserController@deleteUserPermanently');
+Route::put('/restoreUser/{userId}','API\UserController@restoreUser');
+
 
 Route::get('/profile','API\UserController@profile');
 Route::put('/profile','API\UserController@updateProfile');

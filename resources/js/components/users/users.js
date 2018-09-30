@@ -2,7 +2,7 @@ export default {
     data() {
         return {
             editMode: false,
-            pathUserPhoto : './img/profiles/',
+            pathUserPhoto: './img/profiles/',
             users: {},
             // Create a new form instance
             userForm: new Form({
@@ -98,12 +98,12 @@ export default {
         deleteUser(userId) {
             swal({
                 title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                text: "You will be able to revert this",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Yes, softDelete it!'
             }).then((result) => {
 
                 //console.log(result);
@@ -134,9 +134,11 @@ export default {
         },
         loadUsers() {
             axios.get('api/users').then(
-                ({
-                    data
-                }) => (this.users = data.data));
+                (data) => {
+                    this.users = data.data;
+                    console.log('USERS =>',data.data)
+                });
+
         }
     },
     mounted() {

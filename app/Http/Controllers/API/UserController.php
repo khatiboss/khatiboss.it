@@ -27,9 +27,45 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::latest()->paginate(5);
+        $currentUser = auth('api')->user();
+
+       if($currentUser->is_admin){
+            $users = User::all();
+        }else{
+            $users[0] = $currentUser;
+        }
+
+
+        return $users;
+
+        //return User::latest()->paginate(5);
+    }
+
+    public function softUsersList(){
+
+        $softUsers = User::onlyTrashed()->get();
+
+        return $softUsers;
 
     }
+
+    public function deleteUserPermanently($userId){
+
+        $user = User::withTrashed()->where('id', $userId);
+        $user->forceDelete();
+        return ['messageFromLaravel' => 'User deleted Permanently'];
+    }
+
+    public function restoreUser($userId){
+
+        $user = User::withTrashed()->where('id', $userId);
+        $user->restore();
+        return ['messageFromLaravel' => 'User restored to the main list'];
+
+
+    }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -206,6 +242,6 @@ class UserController extends Controller
 
        $user->delete();
 
-       return ['messageFromLaravel' => 'User has been deleted.'];
+       return ['messageFromLaravel' => 'User has been Soft deleted.'];
     }
 }
